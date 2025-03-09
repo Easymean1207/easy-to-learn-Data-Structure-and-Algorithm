@@ -49,7 +49,7 @@ class LinkedList {
 
   /**
    * 마지막 삽입
-   * @param {number} data
+   * @param {any} data
    */
   insertLast(data) {
     this.insertAt(this.count, data);

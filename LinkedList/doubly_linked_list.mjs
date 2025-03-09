@@ -70,7 +70,7 @@ class DoublyLinkedList {
 
   /**
    * 마지막 삽입
-   * @param {number} data
+   * @param {any} data
    */
   insertLast(data) {
     this.insertAt(this.count, data);
@@ -106,7 +106,7 @@ class DoublyLinkedList {
       return deleteNode; // 삭제된 노드 반환
     }
 
-    // 3. 마지막 노드(tail)가 제거되는 경우
+    // 2. 마지막 노드(tail)가 제거되는 경우
     else if (index == this.count - 1) {
       let deleteNode = this.tail; // 삭제할 노드
       // this.tail = this.tail.prev; // 기존 tail의 이전 노드를 새로운 tail로 설정
