@@ -12,8 +12,9 @@ class Stack {
   push(data) {
     this.LinkedList.insertAt(0, data);
   }
+
   /**
-   * 스택에서 데이터를 삭제하고 반환환
+   * 스택에서 데이터를 삭제하고 반환
    * @returns {Node}
    */
   pop() {

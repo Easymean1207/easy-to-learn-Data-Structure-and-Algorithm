@@ -2,7 +2,7 @@ from stack import Stack
 
 stack = Stack()
 
-print("===== 첫번재 출력 =====")
+print("===== 첫번째 출력 =====")
 stack.push(1)
 stack.push(2)
 stack.push(3)
@@ -13,7 +13,7 @@ print(stack.pop().data)
 print(stack.pop().data)
 print(stack.pop().data)
 
-print("===== 두번재 출력 =====")
+print("===== 두번째 출력 =====")
 stack.push(1)
 stack.push(2)
 stack.push(3)

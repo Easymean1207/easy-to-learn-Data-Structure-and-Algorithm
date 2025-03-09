@@ -2,7 +2,7 @@ import { Stack } from './stack.mjs';
 
 let stack = new Stack();
 
-console.log('===== 첫번재 출력 =====');
+console.log('===== 첫번째 출력 =====');
 stack.push(1);
 stack.push(2);
 stack.push(3);
@@ -13,7 +13,7 @@ console.log(stack.pop().data);
 console.log(stack.pop().data);
 console.log(stack.pop().data);
 
-console.log('===== 두번재 출력 =====');
+console.log('===== 두번째 출력 =====');
 stack.push(1);
 stack.push(2);
 stack.push(3);

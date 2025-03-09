@@ -10,7 +10,7 @@ class Stack:
     def __init__(self):
         self.LinkedList = LinkedList()
 
-    # 스택에 데이터 삽입입
+    # 스택에 데이터 삽입
     def push(self, data):
         self.LinkedList.insertAt(0, data)
 
