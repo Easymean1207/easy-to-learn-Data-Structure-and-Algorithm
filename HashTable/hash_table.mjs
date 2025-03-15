@@ -9,7 +9,9 @@ class HashData {
 
 class HashTable {
   constructor() {
+    // 해시 테이블 배열 생성
     this.arr = [];
+    // 해시 테이블의 길이(인덱스) 제한 (0~9)
     for (let i = 0; i < 10; i++) {
       this.arr[i] = new DoublyLinkedList();
     }
@@ -17,11 +19,11 @@ class HashTable {
 
   /**
    * 해시 함수
-   * @param {number} input
+   * @param {number} key
    * @returns {number} hashIndex
    */
-  hashFunction(input) {
-    return input % 10;
+  hashFunction(key) {
+    return key % 10;
   }
 
   /**
