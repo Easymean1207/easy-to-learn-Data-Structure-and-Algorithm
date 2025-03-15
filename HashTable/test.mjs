@@ -18,10 +18,10 @@ console.log(hashTable.get(4)); // 최진철
 hashTable.remove(4);
 console.log(hashTable.get(4)); // 이천수
 
-// for (let i = 0; i < hashTable.arr.length; i++) {
-//   let currentNode = hashTable.arr[i].head;
-//   while (currentNode) {
-//     console.log(currentNode.data.key, currentNode.data.value);
-//     currentNode = currentNode.next;
-//   }
-// }
+for (let i = 0; i < hashTable.arr.length; i++) {
+  let currentNode = hashTable.arr[i].head;
+  while (currentNode) {
+    console.log(currentNode.data.key, currentNode.data.value);
+    currentNode = currentNode.next;
+  }
+}
