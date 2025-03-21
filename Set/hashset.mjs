@@ -11,12 +11,12 @@ class HashSet {
    */
   add(data) {
     if (this.hashTable.get(data) == null) {
-      this.hashTable.set(data, -1);
+      this.hashTable.set(data, -1); // 해시 셋의 value에는 더미 데이터 -1 삽입
     }
   }
 
   /**
-   * 해쉬셋에 데이터 제거
+   * 해쉬셋에서 데이터 제거
    * @param {*} data
    * @returns {Node} 삭제된 데이터
    */
@@ -65,6 +65,7 @@ class HashSet {
   printAll() {
     for (let i = 0; i < this.hashTable.arr.length; i++) {
       let currentNode = this.hashTable.arr[i].head;
+
       while (currentNode) {
         console.log(currentNode.data.key);
         currentNode = currentNode.next;
