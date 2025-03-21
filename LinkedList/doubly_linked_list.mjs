@@ -50,17 +50,17 @@ class DoublyLinkedList {
     else {
       let currentNode = this.head; // head에서부터 탐색 시작
 
-      // 삽입 위치의 이전 노드까지 이동
+      // 삽입 위치의 이전 노드까지 이동z
       for (let i = 0; i < index - 1; i++) {
         currentNode = currentNode.next;
       }
-      newNode.next = currentNode.next; // 새로운 노드의 next를 이전 노드의 next로 설정
-      newNode.prev = currentNode; // 새로운 노드의 이전 노드를 currentNode로 설정
-      currentNode.next = newNode; // 새로운 노드를 이전 노드의 next로 설정
+      newNode.next = currentNode.next; // 새로운 노드의 next를 이전 노드의 next(currentNode.next)로 설정
+      newNode.prev = currentNode; // 새로운 노드의 prev를 이전 노드(currentNode)로 설정
+      currentNode.next = newNode; // 새로운 노드를 이전 노드(currentNode)의 next로 설정
       newNode.next.prev = newNode; // 새로운 노드의 다음 노드의 prev를 새로운 노드로 설정
     }
 
-    // 새로운 노드를 tail로 설정
+    // 새로운 노드가 마지막 노드인 경우 tail로 설정
     if (newNode.next == null) {
       this.tail = newNode;
     }
@@ -92,12 +92,12 @@ class DoublyLinkedList {
     // 1. 첫번째 노드(head)가 제거되는 경우
     if (index == 0) {
       let deleteNode = this.head; // 삭제할 노드
-      // 데이터가 1개일 때
+      // 남은 노드가 1개일 때
       if (this.head.next == null) {
         this.head = null;
         this.tail = null;
       }
-      // 데이터가 2개 이상일 때
+      // 남은 노드가 2개 이상일 때
       else {
         this.head = this.head.next; // 기존 head의 다음 노드를 새로운 head로 설정
         this.head.prev = null; // 새로운 head의 이전 노드를 null로 설정
@@ -109,10 +109,7 @@ class DoublyLinkedList {
     // 2. 마지막 노드(tail)가 제거되는 경우
     else if (index == this.count - 1) {
       let deleteNode = this.tail; // 삭제할 노드
-      // this.tail = this.tail.prev; // 기존 tail의 이전 노드를 새로운 tail로 설정
-      // this.tail.next = null; // 새로운 tail의 다음 노드를 null로 설정
-
-      this.tail.prev.next = null; // 기존 tail의 이전 노드의 다음 노드를 null로 설정
+      this.tail.prev.next = null; // 기존 tail의 이전 노드의 next를 null로 설정
       this.tail = this.tail.prev; // 기존 tail의 이전 노드를 새로운 tail로 설정
 
       this.count--; // 노드 개수 감소

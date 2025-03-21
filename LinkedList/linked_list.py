@@ -47,7 +47,7 @@ class LinkedList:
     # 인덱스 삭제
     def deleteAt(self, index):
         # 인덱스가 최대 인덱스보다 크거나 혹은 음수인 경우 예외 처리
-        if index > self.count or index < 0:
+        if index >= self.count or index < 0:
             raise Exception("제거 가능한 인덱스 범위를 벗어났습니다.")
 
         currentNode = self.head

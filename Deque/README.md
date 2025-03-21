@@ -1,10 +1,10 @@
 ### 덱의 추상자료형
 
-1. head에 데이터 삽입: addFirst()
+1. head에 데이터 삽입: addFirst(data)
 
 2. head에서 데이터 제거: removeFirst()
 
-3. tail에 데이터 삽입: addLast()
+3. tail에 데이터 삽입: addLast(data)
 
 4. tail에서 데이터 제거: removeLast()
 
