@@ -38,7 +38,7 @@ class Queue {
    * @returns {boolean}
    */
   isEmpty() {
-    return this.LinkedList.count == 0 ? true : false;
+    return this.DoublyLinkedList.count == 0 ? true : false;
   }
 }
 

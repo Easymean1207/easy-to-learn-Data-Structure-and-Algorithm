@@ -6,7 +6,7 @@ class HashSet {
   }
 
   /**
-   * 해쉬셋에 데이터를 추가
+   * 해시셋에 데이터를 추가
    * @param {*} data
    */
   add(data) {
@@ -16,7 +16,7 @@ class HashSet {
   }
 
   /**
-   * 해쉬셋에서 데이터 제거
+   * 해시셋에서 데이터 제거
    * @param {*} data
    * @returns {Node} 삭제된 데이터
    */
@@ -25,7 +25,7 @@ class HashSet {
   }
 
   /**
-   * 해쉬셋에 데이터가 있는지 확인
+   * 해시셋에 데이터가 있는지 확인
    * @param {*} data
    * @returns {boolean}
    */
@@ -34,7 +34,7 @@ class HashSet {
   }
 
   /**
-   * 해쉬셋의 모든 데이터를 제거
+   * 해시셋의 모든 데이터를 제거
    */
   clear() {
     for (let i = 0; i < 10; i++) {
@@ -43,7 +43,7 @@ class HashSet {
   }
 
   /**
-   * 해쉬셋이 비어있는지 확인
+   * 해시셋이 비어있는지 확인
    * @returns {boolean}
    */
   isEmpty() {
@@ -59,7 +59,7 @@ class HashSet {
   }
 
   /**
-   * 해쉬셋의 모든 데이터를 출력
+   * 해시셋의 모든 데이터를 출력
    *
    */
   printAll() {

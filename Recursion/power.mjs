@@ -1,6 +1,8 @@
-function power(x, n) {
-  if (n == 0) return 1;
-  return x * power(x, n - 1);
+function power(base, exp) {
+  // 기저 조건
+  if (exp == 0) return 1;
+  // 재귀 부분
+  return base * power(base, exp - 1);
 }
 
-console.log(power(2, 10000000));
+console.log(power(2, 10));

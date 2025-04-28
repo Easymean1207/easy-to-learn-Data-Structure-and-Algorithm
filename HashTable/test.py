@@ -14,9 +14,10 @@ hashTable.set(8, "최태욱")
 hashTable.set(9, "설기현")
 hashTable.set(14, "이천수")
 
-print(hashTable.get(4))
+print(hashTable.get(4))  # 최진철
 hashTable.remove(4)
-print(hashTable.get(4))
+print(hashTable.get(14))  # 이천수
+print(hashTable.get(4))  # None
 
 for i in range(len(hashTable.arr)):
     currentNode = hashTable.arr[i].head

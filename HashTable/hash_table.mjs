@@ -23,7 +23,8 @@ class HashTable {
    * @returns {number} hashIndex
    */
   hashFunction(key) {
-    return key % 10;
+    let hashIndex = key % 10;
+    return hashIndex;
   }
 
   /**
@@ -63,16 +64,16 @@ class HashTable {
    */
   remove(key) {
     // 해당 key의 인덱스 연결리스트를 가져옴
-    let list = this.arr[this.hashFunction(key)];
+    let dataList = this.arr[this.hashFunction(key)];
     // 순회용 currentNode 설정
-    let currentNode = list.head;
+    let currentNode = dataList.head;
     // 연결리스트에서 삭제할 데이터의 인덱스 저장
     let deletedIndex = 0;
 
     // 연결리스트를 순회하며 key에 해당하는 연결리스트의 인덱스를 찾아 삭제
-    while (currentNode) {
+    while (currentNode != null) {
       if (currentNode.data.key == key) {
-        return list.deleteAt(deletedIndex);
+        return dataList.deleteAt(deletedIndex);
       }
       currentNode = currentNode.next;
       deletedIndex++;

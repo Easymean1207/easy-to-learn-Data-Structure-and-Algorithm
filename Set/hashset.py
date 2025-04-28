@@ -10,30 +10,30 @@ class HashSet:
     def __init__(self):
         self.hashTable = HashTable()
 
-    # 해쉬셋에 데이터를 추가
+    # 해시셋에 데이터를 추가
     def add(self, data):
         if self.hashTable.get(data) == None:
             self.hashTable.set(data, -1)  # 해시 셋의 value에는 더미 데이터 -1 삽입
 
-    # 해쉬셋에서서 데이터 제거
+    # 해시셋에서 데이터 제거
     def remove(self, data):
         return self.hashTable.remove(data)
 
-    # 해쉬셋에 데이터가 있는지 확인
+    # 해시셋에 데이터가 있는지 확인
     def isContain(self, data):
         return True if self.hashTable.get(data) else False
 
-    # 해쉬셋의 모든 데이터를 제거
+    # 해시셋의 모든 데이터를 제거
     def clear(self):
         for i in range(10):
             self.hashTable.arr[i].clear()
 
-    # 해쉬셋이 비어있는지 확인
+    # 해시셋이 비어있는지 확인
     def isEmpty(self):
         empty = True
 
         for i in range(10):
-            if self.hashTable.arr[i].count != 0:
+            if self.hashTable.arr[i].count > 0:
                 empty = False
                 break
 

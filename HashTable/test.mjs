@@ -16,7 +16,8 @@ hashTable.set(14, '이천수');
 
 console.log(hashTable.get(4)); // 최진철
 hashTable.remove(4);
-console.log(hashTable.get(4)); // 이천수
+console.log(hashTable.get(14)); // 이천수
+console.log(hashTable.get(4)); // null
 
 for (let i = 0; i < hashTable.arr.length; i++) {
   let currentNode = hashTable.arr[i].head;

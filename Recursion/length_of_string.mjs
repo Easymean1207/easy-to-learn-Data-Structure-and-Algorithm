@@ -1,5 +1,7 @@
 function strLength(arr) {
-  if (arr.length == 1) return 1;
+  // 기저 조건
+  if (arr.length == 0) return 0;
+  // 재귀 부분
   return 1 + strLength(arr.slice(0, -1));
 }
 
