@@ -39,6 +39,7 @@ class HashSet:
 
         return empty
 
+    # 해시셋의 모든 데이터를 출력
     def printAll(self):
         for i in range(len(self.hashTable.arr)):
             currentNode = self.hashTable.arr[i].head
