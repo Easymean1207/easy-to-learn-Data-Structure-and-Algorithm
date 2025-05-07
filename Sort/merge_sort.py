@@ -1,4 +1,5 @@
 def MergeSort(arr, leftIndex, rightIndex):
+    # 기저 조건
     if leftIndex < rightIndex:
         # 중앙 인덱스 계산
         mid = (leftIndex + rightIndex) // 2
@@ -19,7 +20,7 @@ def Merge(arr, leftIndex, midIndex, rightIndex):
     # 오른쪽 영역의 시작 인덱스
     rightAreaIndex = midIndex + 1
 
-    # 값을 저장할 임시 배열
+    # 두 영역을 병합하기 위한 임시 배열
     tempArr = []
     # 임시 배열의 시작 인덱스
     tempArrIndex = leftIndex
@@ -46,7 +47,7 @@ def Merge(arr, leftIndex, midIndex, rightIndex):
 
     # 왼쪽 병합이 먼저 끝난 경우
     if leftAreaIndex > midIndex:
-        # 오른쪽 영역의 값을 임시 배열에 저장
+        # 오른쪽 영역의 나머지 값들을 임시 배열에 저장
         for i in range(rightAreaIndex, rightIndex + 1):
             tempArr.append(arr[i])
             # tempArr[tempArrIndex] = arr[i]
@@ -54,7 +55,7 @@ def Merge(arr, leftIndex, midIndex, rightIndex):
 
     # 오른쪽 병합이 먼저 끝난 경우
     elif rightAreaIndex > rightIndex:
-        # 왼쪽 영역의 값을 임시 배열에 저장
+        # 왼쪽 영역의 나머지 값들을 임시 배열에 저장
         for i in range(leftAreaIndex, midIndex + 1):
             tempArr.append(arr[i])
             # tempArr[tempArrIndex] = arr[i]
