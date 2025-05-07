@@ -6,7 +6,7 @@ function InsertionSort(arr) {
 
     // for 문을 사용한 경우
     for (sortedLastIndex; sortedLastIndex >= 0; sortedLastIndex--) {
-      // 배열
+      // 현재 인덱스의 값이 삽입할 값(insertingValue)보다 크면 해당 인덱스의 값을 한 칸 뒤로 이동
       if (arr[sortedLastIndex] > insertingValue) {
         arr[sortedLastIndex + 1] = arr[sortedLastIndex];
       } else {
