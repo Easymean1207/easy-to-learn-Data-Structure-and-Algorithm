@@ -1,0 +1,56 @@
+class BinaryTree:
+    def __init__(self, data, leftTree=None, rightTree=None):
+        self.data = data
+        self.left = leftTree
+        self.right = rightTree
+
+    def getData(self):
+        return self.data
+
+    def setData(self, data):
+        self.data = data
+
+    def getLeftSubTree(self):
+        return self.left
+
+    def getRightSubTree(self):
+        return self.right
+
+    def setLeftSubTree(self, tree):
+        self.left = tree
+
+    def setRightSubTree(self, tree):
+        self.right = tree
+
+    # 전위 순회 (Pre-order Traversal)
+    def preOrderTraversal(self, tree):
+        # 기저 조건: 자식 노드가 없으면 종료
+        if tree is None:
+            return
+
+        # 재귀 패턴: 루트 -> 왼쪽 -> 오른쪽
+        print(tree.data)
+        self.preOrderTraversal(tree.getLeftSubTree())
+        self.preOrderTraversal(tree.getRightSubTree())
+
+    # 중위 순회 (In-order Traversal)
+    def inOrderTraversal(self, tree):
+        # 기저 조건: 자식 노드가 없으면 종료
+        if tree is None:
+            return
+
+        # 재귀 패턴: 왼쪽 -> 루트 -> 오른쪽
+        self.inOrderTraversal(tree.getLeftSubTree())
+        print(tree.data)
+        self.inOrderTraversal(tree.getRightSubTree())
+
+    # 후위 순회 (Post-order Traversal)
+    def postOrderTraversal(self, tree):
+        # 기저 조건: 자식 노드가 없으면 종료
+        if tree is None:
+            return
+
+        # 재귀 패턴: 왼쪽 -> 오른쪽 -> 루트
+        self.postOrderTraversal(tree.getLeftSubTree())
+        self.postOrderTraversal(tree.getRightSubTree())
+        print(tree.data)
