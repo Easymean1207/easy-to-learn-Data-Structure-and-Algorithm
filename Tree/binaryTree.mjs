@@ -61,6 +61,20 @@ class BinaryTree {
     this.postOrderTraversal(tree.getRightSubTree());
     console.log(tree.data);
   }
+
+  // 왼쪽 서브트리 제거
+  removeLeftSubTree() {
+    let deletedNode = this.getLeftSubTree();
+    this.setLeftSubTree(null);
+    return deletedNode;
+  }
+
+  // 오른쪽 서브트리 제거
+  removeRightSubTree() {
+    let deletedNode = this.getRightSubTree();
+    this.setRightSubTree(null);
+    return deletedNode;
+  }
 }
 
 export { BinaryTree };

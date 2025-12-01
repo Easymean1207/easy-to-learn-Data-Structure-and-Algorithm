@@ -54,3 +54,16 @@ class BinaryTree:
         self.postOrderTraversal(tree.getLeftSubTree())
         self.postOrderTraversal(tree.getRightSubTree())
         print(tree.data)
+
+    # 왼쪽 서브트리 제거
+    def removeLeftSubTree(self):
+        deletedNode = self.getLeftSubTree()
+        self.setLeftSubTree(None)
+        return deletedNode
+    
+    # 오른쪽 서브트리 제거
+    def removeRightSubTree(self):
+        deletedNode = self.getRightSubTree()
+        self.setRightSubTree(None)
+        return deletedNode
+    
